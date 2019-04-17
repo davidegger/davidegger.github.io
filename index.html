@@ -55,27 +55,38 @@
         //cat2Name.innerText = cat_name_2;
       }
 
-      function showCat(catID){
-        if (img1.src.length == 0 || img1.src == catImages[catID]){
+      function updateCatView(catID, container){
+        if (container == 0){
           img1.src = catImages[catID];
           name1.innerText = catNames[catID];
           counter1.innerText = catCounts[catID];
         }
-        else if (img2.src.length == 0 || img2.src == catImages[catID]) {
+        if (container == 1){
           img2.src = catImages[catID];
           name2.innerText = catNames[catID];
           counter2.innerText = catCounts[catID];
         }
+      }
+
+      function showCat(catID){
+        if (img1.src.length == 0){
+          updateCatView(catID, 0);
+        }
+        else if (img1.src == catImages[catID]) {
+          updateCatView(catID, 0);
+        }
+        else if (img2.src.length == 0) {
+          updateCatView(catID, 1);
+        }
+        else if (img2.src == catImages[catID]) {
+          updateCatView(catID, 1);
+        }
         else {
           let rando = (Math.random()>0.5)? 1 : 0;
           if (rando == 0){
-            img1.src = catImages[catID];
-            name1.innerText = catNames[catID];
-            counter1.innerText = catCounts[catID];
+            updateCatView(catID, 0);
           } else {
-            img2.src = catImages[catID];
-            name2.innerText = catNames[catID];
-            counter2.innerText = catCounts[catID];
+            updateCatView(catID, 1);
           }
         }
       }
