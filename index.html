@@ -71,22 +71,26 @@
       function showCat(catID){
         if (img1.src.length == 0){
           updateCatView(catID, 0);
+          console.log("image 1 blank");
         }
         else if (img1.src == catImages[catID]) {
-          updateCatView(catID, 0);
+          console.log("img 1 already showing cat");
         }
         else if (img2.src.length == 0) {
           updateCatView(catID, 1);
+          console.log("image 2 blank");
         }
         else if (img2.src == catImages[catID]) {
-          updateCatView(catID, 1);
+          console.log("img 2 already showing cat");
         }
         else {
           let rando = (Math.random()>0.5)? 1 : 0;
           if (rando == 0){
             updateCatView(catID, 0);
+            console.log("random 0");
           } else {
             updateCatView(catID, 1);
+            console.log("random 1");
           }
         }
       }
