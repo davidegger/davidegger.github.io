@@ -56,12 +56,12 @@
       }
 
       function showCat(catID){
-        if (img1.src == "" || catImages[catID]){
+        if (img1.src.length == 0 || img1.src == catImages[catID]){
           img1.src = catImages[catID];
           name1.innerText = catNames[catID];
           counter1.innerText = catCounts[catID];
         }
-        else if (img2.src == "" || catImages[catID]) {
+        else if (img2.src.length == 0 || img2.src == catImages[catID]) {
           img2.src = catImages[catID];
           name2.innerText = catNames[catID];
           counter2.innerText = catCounts[catID];
