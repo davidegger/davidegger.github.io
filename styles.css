@@ -1,0 +1,9 @@
+.cat1vContainer{
+  flex-direction: column;
+}
+.cat2vContainer{
+  flex-direction: column;
+}
+.catContainer{
+  flex-direction: row;
+}
