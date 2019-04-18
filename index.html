@@ -1,34 +1,24 @@
 <html>
 <head>
 <link rel=stylesheet type=text/css href='styles.css'>
+
 </head>
-<body id = 'body' onload="nameCats()">
+<body id = 'body'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
   <center>
     <table>
       <tr>
-        <td><table id = 'catNamesTable'>
+        <td><div id = 'catList'>
 
-        </table>
+        </div>
         </td>
         <td><table><tr><td>
-          <div id = 'cat1vContainer'>
-            <div id = 'cat1'>
-              <h2 id = 'cat1Name'>Name</h2>
-              <img width = '300' height = '300' id = 'cat1Image' src="">
-            </div>
-            <div><h3 id = 'counter1'>0</h3></div>
-          </div></td><td>
-          <div id = 'cat2vContainer'>
-            <div id = 'cat2'>
-              <h2 id = 'cat2Name'>Name</h2>
-              <img width = '300' height = '300' id = 'cat2Image' src = "">
-            </div>
-            <div><h3 id = 'counter2'>0</h3></div>
-          </div>
-        </td>
+          <div id = 'catView'><div></td>
       </tr></table></td></tr>
     </table>
-    <script>
+  <!--  <script>
     var catNames = ['Oliver', 'Sophie', 'Howie', 'Rory', 'Lucy'];
     var catImages = ['Oliver.jpeg', 'Sophie.jpeg', 'Howie.jpeg',
                     'Rory.jpeg', 'Lucy.jpeg'];
@@ -119,7 +109,7 @@
       }, false);
 
 
-    </script>
+    </script> -->
   </center>
 </body>
 </html>
